@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0D2EA"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@+id/background"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:srcCompat="@drawable/background_image" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_image" />
+
+    <ListView
+        android:id="@+id/emotion_list"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="40dp"
+        android:background="#F6E1F2"
+        android:foregroundGravity="center_horizontal"
+        android:headerDividersEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background_image" />
+
+    <ImageView
+        android:id="@+id/speak_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/background_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/background_image"
+        app:layout_constraintTop_toTopOf="@+id/background_image"
+        app:srcCompat="@drawable/emotion_word_bubble" />
+
+    <TextView
+        android:id="@+id/current_emotion_text"
+        android:layout_width="195dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="184dp"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center"
+        android:text="\?\?\?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/speak_bubble"
+        app:layout_constraintEnd_toEndOf="@id/speak_bubble"
+        app:layout_constraintStart_toStartOf="@id/speak_bubble" />
+
+    <TextView
+        android:id="@+id/bluetooth_connection_text"
+        android:layout_width="320dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="296dp"
+        android:gravity="center"
+        android:text="Not connected with your friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background_image" />
+
+    <Button
+        android:id="@+id/setup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:text="Set Configuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
